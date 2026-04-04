@@ -36,3 +36,10 @@ Unlike Level-1, this version includes **reusable activity toggles**, animated pr
 ---
 
 ## Folder Structure
+student-activity-tracker-level2/
+│
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+## Live demo
