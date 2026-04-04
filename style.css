@@ -1,0 +1,136 @@
+/* General styling */
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f0f2f5;
+    text-align:center;
+}
+
+nav{
+    background:#4CAF50;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    padding:15px;
+    flex-wrap: wrap;
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+    cursor:pointer;
+    padding:0;
+    margin:0;
+}
+
+nav ul li{
+    color:white;
+    font-weight:bold;
+    transition: color 0.3s;
+}
+
+nav ul li:hover{
+    color:#ffeb3b;
+}
+
+.section{
+    display:none;
+    padding:30px;
+}
+
+.active{
+    display:block;
+}
+
+button{
+    padding:10px 20px;
+    background:#2196F3;
+    color:white;
+    border:none;
+    cursor:pointer;
+    margin-top:10px;
+    border-radius:8px;
+    font-size:16px;
+    transition: all 0.3s ease;
+    box-shadow:0 4px 6px rgba(0,0,0,0.2);
+}
+
+button:hover{
+    background:#1976d2;
+    transform: scale(1.05);
+}
+
+.activity{
+    background:#fff9c4; /* Pending light yellow */
+    padding:15px;
+    margin:15px auto;
+    width:90%;
+    max-width:400px;
+    border-radius:12px;
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition: all 0.3s ease;
+}
+
+.activity:hover{
+    transform: scale(1.02);
+    box-shadow:0 6px 10px rgba(0,0,0,0.15);
+}
+
+.activity.completed{
+    background:#c8e6c9; /* Completed light green */
+}
+
+.activity.completed h3,
+.activity.completed p{
+    text-decoration: line-through;
+    color: #555;
+    transition: all 0.3s;
+}
+
+.activity-details{
+    text-align:left;
+}
+
+input[type="checkbox"]{
+    transform: scale(1.4);
+    cursor:pointer;
+    accent-color: #4CAF50; /* checkbox color */
+    transition: transform 0.2s ease;
+}
+
+input[type="checkbox"]:hover{
+    transform: scale(1.5);
+}
+
+/* Progress bar styling */
+.progressBar{
+    width:90%;
+    max-width:400px;
+    height:25px;
+    background:#ddd;
+    margin:auto;
+    border-radius:15px;
+    overflow:hidden;
+    margin-bottom:10px;
+}
+
+#progressFill{
+    height:100%;
+    width:0%;
+    background: linear-gradient(90deg, #4CAF50, #81C784);
+    transition: width 0.6s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width:500px){
+    .activity{
+        flex-direction: column;
+        align-items: flex-start;
+        gap:10px;
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Activity Tracker - Pro Level</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <h2>Student Activity Tracker</h2>
+    <ul>
+        <li onclick="showSection('home')">Home</li>
+        <li onclick="showSection('activities')">Activities</li>
+        <li onclick="showSection('progress')">Progress</li>
+    </ul>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="section active">
+    <h1>Welcome Students 👋</h1>
+    <p>Track your learning activities with colors, progress, and animations!</p>
+    <button onclick="showSection('activities')">Start Tracking</button>
+</section>
+
+<!-- Activity List Section -->
+<section id="activities" class="section">
+    <h2>Activity List</h2>
+    <div id="activityContainer"></div>
+</section>
+
+<!-- Progress Section -->
+<section id="progress" class="section">
+    <h2>Your Progress</h2>
+    <div class="progressBar">
+        <div id="progressFill"></div>
+    </div>
+    <p id="progressText"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
